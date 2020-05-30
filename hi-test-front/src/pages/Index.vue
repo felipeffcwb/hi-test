@@ -52,10 +52,6 @@ import { mapActions, mapState } from 'vuex'
 export default {
   name: 'PageIndex',
   mounted () {
-    debugger
-    this.getCards()
-  },
-  updated: function () {
     this.getCards()
   },
   computed: {
@@ -72,7 +68,6 @@ export default {
       this.blockCards(card)
     },
     active (card) {
-      debugger
       this.activeCards(card)
     },
     approved (card) {

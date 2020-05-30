@@ -20,7 +20,6 @@ function getCards ({ commit }) {
 }
 
 const blockCards = ({ commit }, card) => {
-  debugger
   Loading.show({
     delay: 400 // ms
   })
@@ -30,6 +29,7 @@ const blockCards = ({ commit }, card) => {
       .then((success) => {
         resolve(success.data)
         commit('EDIT_CARDS', success.data)
+        location.reload()
         Loading.hide()
       })
       .catch((error) => {
@@ -40,7 +40,6 @@ const blockCards = ({ commit }, card) => {
 }
 
 const activeCards = ({ commit }, card) => {
-  debugger
   Loading.show({
     delay: 400 // ms
   })
@@ -50,6 +49,7 @@ const activeCards = ({ commit }, card) => {
       .then((success) => {
         resolve(success.data)
         commit('EDIT_CARDS', success.data)
+        location.reload()
         Loading.hide()
       })
       .catch((error) => {
@@ -60,7 +60,6 @@ const activeCards = ({ commit }, card) => {
 }
 
 const approvedCards = ({ commit }, card) => {
-  debugger
   Loading.show({
     delay: 400 // ms
   })
@@ -70,6 +69,7 @@ const approvedCards = ({ commit }, card) => {
       .then((success) => {
         resolve(success.data)
         commit('EDIT_CARDS', success.data)
+        location.reload()
         Loading.hide()
       })
       .catch((error) => {
@@ -80,7 +80,6 @@ const approvedCards = ({ commit }, card) => {
 }
 
 const disapprovedCards = ({ commit }, card) => {
-  debugger
   Loading.show({
     delay: 400 // ms
   })
@@ -90,6 +89,7 @@ const disapprovedCards = ({ commit }, card) => {
       .then((success) => {
         resolve(success.data)
         commit('EDIT_CARDS', success.data)
+        location.reload()
         Loading.hide()
       })
       .catch((error) => {
